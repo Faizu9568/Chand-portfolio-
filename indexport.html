@@ -1,0 +1,1938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chand Mohd | Lead Android Engineer</title>
+
+    <meta
+        name="description"
+        content="Portfolio of Chand Mohd, Lead Android Engineer specializing in Kotlin, Jetpack, Android architecture and mobile applications."
+    >
+<style>
+    /* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07090d;
+    color: #f4f7fb;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ================================
+   BACKGROUND
+================================ */
+
+.background-glow {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.12;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.glow-one {
+    background: #00aaff;
+    top: -200px;
+    left: -200px;
+}
+
+.glow-two {
+    background: #7c3aed;
+    right: -200px;
+    bottom: -200px;
+}
+
+
+/* ================================
+   NAVBAR
+================================ */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(7, 9, 13, 0.75);
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 25px;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #28b7ff;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    color: #aeb7c5;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 120px 25px 70px;
+
+    position: relative;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    align-items: center;
+    gap: 70px;
+}
+
+.hero-small {
+    color: #28b7ff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(55px, 8vw, 100px);
+    line-height: 0.95;
+
+    letter-spacing: -5px;
+}
+
+.hero h1 span {
+    color: #28b7ff;
+}
+
+.hero h2 {
+    margin-top: 25px;
+
+    font-size: clamp(24px, 4vw, 38px);
+
+    color: #cbd5e1;
+}
+
+.hero-description {
+    max-width: 650px;
+
+    margin-top: 25px;
+
+    color: #8f9aaa;
+
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+
+    margin-top: 35px;
+}
+
+.btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 13px 22px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #28b7ff;
+    color: #04111a;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 35px rgba(40, 183, 255, 0.25);
+}
+
+.secondary-btn {
+    border: 1px solid #28313d;
+    color: #e5e7eb;
+}
+
+.secondary-btn:hover {
+    background: #11161e;
+    transform: translateY(-3px);
+}
+
+.hero-location {
+    margin-top: 30px;
+
+    color: #737e8e;
+
+    font-size: 13px;
+}
+
+.hero-location span {
+    color: #31d17c;
+    margin-right: 7px;
+}
+
+
+/* ================================
+   PROFILE
+================================ */
+
+.hero-image-container {
+    position: relative;
+
+    width: 400px;
+    height: 400px;
+
+    margin: auto;
+}
+
+.profile-card {
+    position: absolute;
+
+    inset: 25px;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    background: linear-gradient(
+        145deg,
+        #121923,
+        #090c11
+    );
+
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card {
+    position: absolute;
+    inset: 30px;
+
+    border-radius: 28px;
+    overflow: hidden;
+
+    background: #0b1119;
+
+    border: 2px solid rgba(40, 183, 255, 0.65);
+
+    box-shadow:
+        0 0 25px rgba(40, 183, 255, 0.25),
+        0 0 70px rgba(40, 183, 255, 0.10);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 2;
+}
+
+.profile-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.profile-card:hover img {
+    transform: scale(1.04);
+}
+
+.image-ring {
+    position: absolute;
+
+    inset: 0;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(40, 183, 255, 0.25);
+
+    animation: rotateRing 15s linear infinite;
+}
+
+@keyframes rotateRing {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.floating-card {
+    position: absolute;
+
+    background: rgba(15, 20, 28, 0.9);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 14px 17px;
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.floating-card strong {
+    display: block;
+
+    font-size: 18px;
+
+    color: #ffffff;
+}
+
+.floating-card span {
+    display: block;
+
+    color: #7f8b9b;
+
+    font-size: 11px;
+}
+
+.card-top {
+    top: 20px;
+    right: -30px;
+}
+
+.card-bottom {
+    bottom: 30px;
+    left: -35px;
+}
+
+
+/* ================================
+   SCROLL
+================================ */
+
+.scroll-indicator {
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    color: #596372;
+
+    font-size: 11px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.scroll-indicator span {
+    width: 5px;
+    height: 5px;
+
+    background: #28b7ff;
+
+    border-radius: 50%;
+
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: 0.2;
+    }
+}
+
+
+/* ================================
+   SECTIONS
+================================ */
+
+.section {
+    padding: 120px 25px;
+}
+
+.dark-section {
+    background: #0a0d12;
+}
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+    color: #28b7ff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.section-heading h2 {
+    font-size: clamp(35px, 5vw, 60px);
+
+    letter-spacing: -2px;
+
+    line-height: 1;
+}
+
+.section-heading h2 span {
+    color: #28b7ff;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+}
+
+.about-text p {
+    color: #929cab;
+
+    margin-bottom: 20px;
+
+    font-size: 16px;
+}
+
+.about-stats {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+}
+
+.stat-box {
+    padding: 30px;
+
+    border: 1px solid #1d2530;
+
+    border-radius: 14px;
+
+    background: #0c1118;
+
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(40, 183, 255, 0.4);
+}
+
+.stat-box strong {
+    display: block;
+
+    color: #28b7ff;
+
+    font-size: 35px;
+}
+
+.stat-box span {
+    color: #778293;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+.skills-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.skill-category {
+    padding: 30px;
+
+    border: 1px solid #1c2430;
+
+    border-radius: 16px;
+
+    background: #0d1117;
+}
+
+.skill-category h3 {
+    margin-bottom: 20px;
+
+    font-size: 19px;
+}
+
+.skill-list {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.skill-list span,
+.project-tags span {
+    padding: 7px 11px;
+
+    border-radius: 6px;
+
+    background: #141a22;
+
+    color: #99a4b3;
+
+    font-size: 12px;
+
+    border: 1px solid #202a36;
+}
+
+
+/* ================================
+   EXPERIENCE
+================================ */
+
+.timeline {
+    position: relative;
+
+    max-width: 950px;
+
+    margin: auto;
+}
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 10px;
+    top: 0;
+    bottom: 0;
+
+    width: 1px;
+
+    background: #26303c;
+}
+
+.timeline-item {
+    position: relative;
+
+    padding-left: 55px;
+
+    margin-bottom: 35px;
+}
+
+.timeline-dot {
+    position: absolute;
+
+    left: 4px;
+    top: 30px;
+
+    width: 13px;
+    height: 13px;
+
+    border-radius: 50%;
+
+    background: #28b7ff;
+
+    box-shadow: 0 0 0 5px #07090d;
+}
+
+.experience-card {
+    padding: 30px;
+
+    border: 1px solid #1e2732;
+
+    border-radius: 16px;
+
+    background: #0b0f15;
+
+    transition: 0.3s;
+}
+
+.experience-card:hover {
+    transform: translateX(5px);
+
+    border-color: rgba(40, 183, 255, 0.35);
+}
+
+.experience-top {
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 20px;
+}
+
+.experience-card h3 {
+    font-size: 20px;
+}
+
+.experience-card h4 {
+    margin-top: 4px;
+
+    color: #28b7ff;
+
+    font-weight: 500;
+}
+
+.date {
+    color: #6f7b8b;
+
+    font-size: 12px;
+
+    white-space: nowrap;
+}
+
+.location {
+    color: #626e7d;
+
+    font-size: 12px;
+
+    margin: 8px 0 18px;
+}
+
+.experience-card p,
+.experience-card li {
+    color: #8d98a7;
+
+    font-size: 14px;
+}
+
+.experience-card ul {
+    padding-left: 18px;
+}
+
+.experience-card li {
+    margin-bottom: 7px;
+}
+
+
+/* ================================
+   PROJECTS
+================================ */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+.project-card {
+    padding: 35px;
+
+    min-height: 300px;
+
+    border: 1px solid #1c2430;
+
+    border-radius: 18px;
+
+    background: #0d1117;
+
+    transition: 0.35s;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.project-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -80px;
+    top: -80px;
+
+    border-radius: 50%;
+
+    background: #28b7ff;
+
+    opacity: 0.04;
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(40, 183, 255, 0.4);
+}
+
+.project-number {
+    color: #28b7ff;
+
+    font-size: 12px;
+
+    margin-bottom: 35px;
+}
+
+.project-card h3 {
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: #8792a1;
+
+    font-size: 14px;
+
+    margin-bottom: 25px;
+}
+
+.project-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+
+/* ================================
+   IMPACT
+================================ */
+
+.impact-section {
+    padding: 75px 25px;
+
+    border-top: 1px solid #151c25;
+    border-bottom: 1px solid #151c25;
+
+    background: #080b10;
+}
+
+.impact-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    text-align: center;
+
+    gap: 20px;
+}
+
+.impact-grid strong {
+    display: block;
+
+    font-size: 45px;
+
+    color: #28b7ff;
+}
+
+.impact-grid span {
+    color: #778293;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   EDUCATION
+================================ */
+
+.education-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 30px;
+
+    max-width: 700px;
+
+    border: 1px solid #1e2732;
+
+    border-radius: 16px;
+
+    background: #0d1117;
+}
+
+.education-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #131c25;
+
+    font-size: 27px;
+}
+
+.education-card h3 {
+    font-size: 20px;
+}
+
+.education-card p {
+    color: #768293;
+
+    margin-top: 5px;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 750px;
+
+    margin: auto;
+}
+
+.contact-label {
+    color: #28b7ff;
+
+    letter-spacing: 3px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.contact-content h2 {
+    font-size: clamp(40px, 6vw, 70px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.contact-content h2 span {
+    color: #28b7ff;
+}
+
+.contact-content > p:not(.contact-label) {
+    color: #858f9d;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    border-top: 1px solid #171e27;
+
+    background: #07090d;
+
+    padding: 30px 25px;
+}
+
+.footer-container {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-container strong {
+    font-size: 15px;
+}
+
+.footer-container p {
+    color: #626d7b;
+
+    font-size: 12px;
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 850px) {
+
+    .nav-links {
+        position: absolute;
+
+        top: 75px;
+        left: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        background: #0a0d12;
+
+        border-bottom: 1px solid #1b232e;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 70px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-location {
+        text-align: center;
+    }
+
+    .hero-image-container {
+        width: 320px;
+        height: 320px;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .footer-container {
+        flex-direction: column;
+
+        gap: 15px;
+
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .hero h1 {
+        font-size: 55px;
+
+        letter-spacing: -3px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-image-container {
+        width: 270px;
+        height: 270px;
+    }
+
+    .floating-card {
+        transform: scale(0.85);
+    }
+
+    .card-top {
+        right: -45px;
+    }
+
+    .card-bottom {
+        left: -45px;
+    }
+
+    .section {
+        padding: 85px 20px;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-top {
+        flex-direction: column;
+    }
+
+    .date {
+        white-space: normal;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+    /* ================================
+   SCROLL REVEAL
+================================ */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+</head>
+
+<body>
+
+    <!-- Background -->
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                CM<span>.</span>
+            </a>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <div class="hero-container">
+
+            <div class="hero-content">
+
+                <p class="hero-small">
+                    HELLO, I'M
+                </p>
+
+                <h1>
+                    Chand <span>Mohd</span>
+                </h1>
+
+                <h2>
+                    Lead Android Engineer
+                </h2>
+
+                <p class="hero-description">
+                    Building scalable, high-performance Android applications
+                    with Kotlin, Jetpack, modern architecture and a strong
+                    focus on user experience.
+                </p>
+<div class="hero-buttons">
+
+    <a href="#projects" class="btn primary-btn">
+        View My Work
+    </a>
+
+    <a
+        href="https://www.linkedin.com/in/chand-mohd-592b60141/"
+        target="_blank"
+        class="btn secondary-btn"
+    >
+        LinkedIn ↗
+    </a>
+
+    <a
+        href="https://github.com/chandmohd/"
+        target="_blank"
+        class="btn secondary-btn"
+    >
+        GitHub ↗
+    </a>
+
+    <a
+        href="https://www.instagram.com/chandmohd00/"
+        target="_blank"
+        class="btn secondary-btn"
+    >
+        Instagram ↗
+    </a>
+
+</div>
+                <div class="hero-location">
+                    <span>●</span>
+                    Gurugram, Haryana, India
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE -->
+            <div class="hero-image-container">
+
+                <div class="image-ring"></div>
+
+                <div class="profile-card">
+
+                  
+     <img
+    src="chand.jpg"
+    alt="Chand Mohd"
+    onerror="this.style.display='none'; document.querySelector('.profile-placeholder').style.display='flex';"
+>
+                    <div class="profile-placeholder">
+                        CM
+                    </div>
+
+                </div>
+
+                <div class="floating-card card-top">
+                    <strong>8+</strong>
+                    <span>Years Experience</span>
+                </div>
+
+                <div class="floating-card card-bottom">
+                    <strong>Kotlin</strong>
+                    <span>Android Development</span>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="scroll-indicator">
+            <span></span>
+            Scroll to explore
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+                <p>01 — ABOUT</p>
+                <h2>Building apps that <span>matter.</span></h2>
+            </div>
+
+            <div class="about-grid">
+
+                <div class="about-text">
+
+                    <p>
+                        I'm Chand Mohd, a Lead Android Engineer based in
+                        Gurugram, India. I specialize in designing and
+                        developing scalable Android applications using Kotlin,
+                        Jetpack and modern software architecture.
+                    </p>
+
+                    <p>
+                        Over the years, I've worked on mobility, delivery,
+                        education and digital platforms, helping teams build
+                        reliable products used by thousands of users.
+                    </p>
+
+                    <p>
+                        My experience includes Android architecture,
+                        performance optimization, real-time location tracking,
+                        CI/CD, analytics and team leadership.
+                    </p>
+
+                </div>
+
+
+                <div class="about-stats">
+
+                    <div class="stat-box">
+                        <strong>80K+</strong>
+                        <span>Monthly Active Users</span>
+                    </div>
+
+                    <div class="stat-box">
+                        <strong>1M+</strong>
+                        <span>App Downloads</span>
+                    </div>
+
+                    <div class="stat-box">
+                        <strong>99.9%</strong>
+                        <span>Crash-Free Experience</span>
+                    </div>
+
+                    <div class="stat-box">
+                        <strong>4.5+</strong>
+                        <span>Play Store Ratings</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section class="section dark-section" id="skills">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+                <p>02 — SKILLS</p>
+                <h2>My technical <span>toolbox.</span></h2>
+            </div>
+
+
+            <div class="skills-grid">
+
+                <div class="skill-category">
+
+                    <h3>Android</h3>
+
+                    <div class="skill-list">
+                        <span>Kotlin</span>
+                        <span>Android SDK</span>
+                        <span>Jetpack</span>
+                        <span>Jetpack Compose</span>
+                        <span>MVVM</span>
+                        <span>RoomDB</span>
+                        <span>Data Binding</span>
+                        <span>Coroutines</span>
+                        <span>WorkManager</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <h3>Architecture</h3>
+
+                    <div class="skill-list">
+                        <span>Software Architecture</span>
+                        <span>Dependency Injection</span>
+                        <span>Multi-Module</span>
+                        <span>Design Patterns</span>
+                        <span>Memory Management</span>
+                        <span>Multithreading</span>
+                        <span>Problem Solving</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <h3>Development</h3>
+
+                    <div class="skill-list">
+                        <span>Java</span>
+                        <span>Core Java</span>
+                        <span>RxJava</span>
+                        <span>Retrofit</span>
+                        <span>REST APIs</span>
+                        <span>Data Structures</span>
+                        <span>LiveData</span>
+                    </div>
+
+                </div>
+
+
+                <div class="skill-category">
+
+                    <h3>Tools & Platforms</h3>
+
+                    <div class="skill-list">
+                        <span>Android Studio</span>
+                        <span>Google Maps SDK</span>
+                        <span>Mixpanel</span>
+                        <span>MoEngage</span>
+                        <span>SonarQube</span>
+                        <span>Android Lint</span>
+                        <span>Jira</span>
+                        <span>CI/CD</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+                <p>03 — EXPERIENCE</p>
+                <h2>Where I've <span>worked.</span></h2>
+            </div>
+
+
+            <div class="timeline">
+
+
+                <!-- FNP -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="experience-top">
+
+                            <div>
+                                <h3>Lead Android Engineer</h3>
+                                <h4>FNP</h4>
+                            </div>
+
+                            <span class="date">
+                                Jan 2026 — Present
+                            </span>
+
+                        </div>
+
+                        <p class="location">
+                            Gurugram · On-site
+                        </p>
+
+                        <p>
+                            Currently leading the transformation of FNP's
+                            mobile applications with a focus on scalable
+                            Android development and modern engineering
+                            practices.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WIOM -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="experience-top">
+
+                            <div>
+                                <h3>Lead Android Engineer</h3>
+                                <h4>Wiom</h4>
+                            </div>
+
+                            <span class="date">
+                                Jun 2025 — Feb 2026
+                            </span>
+
+                        </div>
+
+                        <p class="location">
+                            Gurugram · On-site
+                        </p>
+
+                        <p>
+                            Worked on Android application development,
+                            architecture and engineering leadership.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WAYO LEAD -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="experience-top">
+
+                            <div>
+                                <h3>Lead Android Engineer</h3>
+                                <h4>Wayo</h4>
+                            </div>
+
+                            <span class="date">
+                                Oct 2024 — Aug 2025
+                            </span>
+
+                        </div>
+
+                        <p class="location">
+                            Gurugram · On-site
+                        </p>
+
+                        <ul>
+                            <li>Led customer and driver applications.</li>
+                            <li>Applications serving 80K monthly active users.</li>
+                            <li>Implemented backend-driven UI architecture.</li>
+                            <li>Worked with Retrofit and RoomDB.</li>
+                            <li>Implemented real-time tracking using Google Maps SDK.</li>
+                            <li>Built CI/CD pipelines and release processes.</li>
+                            <li>Used Coroutines and WorkManager for background tasks.</li>
+                            <li>Maintained a 99.9% crash-free experience.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- WAYO SENIOR -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="experience-top">
+
+                            <div>
+                                <h3>Senior Android Developer</h3>
+                                <h4>Wayo</h4>
+                            </div>
+
+                            <span class="date">
+                                Apr 2024 — Oct 2024
+                            </span>
+
+                        </div>
+
+                        <p class="location">
+                            Gurugram
+                        </p>
+
+                        <p>
+                            Led Android development at Wayo, contributing
+                            to application architecture and product delivery.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BLUSMART -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="experience-top">
+
+                            <div>
+                                <h3>Senior Android Developer</h3>
+                                <h4>BluSmart</h4>
+                            </div>
+
+                            <span class="date">
+                                Oct 2020 — Aug 2025
+                            </span>
+
+                        </div>
+
+                        <p class="location">
+                            Gurugram
+                        </p>
+
+                        <ul>
+                            <li>Migrated Rider App from RxJava to Kotlin Coroutines.</li>
+                            <li>Designed and maintained multi-module architecture.</li>
+                            <li>Led a 4-member team rewriting the Driver App.</li>
+                            <li>Implemented Jetpack and RoomDB.</li>
+                            <li>Worked with Google Maps and real-time location tracking.</li>
+                            <li>Optimized foreground services and battery usage.</li>
+                            <li>Managed releases for apps with 1M+ downloads.</li>
+                            <li>Used SonarQube and Android Lint for code quality.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+
+                <!-- INNOBLES -->
+                <div class="timeline-item">
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="experience-card">
+
+                        <div class="experience-top">
+
+                            <div>
+                                <h3>Android Developer</h3>
+                                <h4>Innobles</h4>
+                            </div>
+
+                            <span class="date">
+                                Apr 2018 — Oct 2020
+                            </span>
+
+                        </div>
+
+                        <p class="location">
+                            Greater Delhi Area
+                        </p>
+
+                        <ul>
+                            <li>Developed the Digital Kisan application.</li>
+                            <li>Implemented multilingual functionality.</li>
+                            <li>Integrated Razorpay payments.</li>
+                            <li>Worked on Prefect Academy using MVP to MVVM migration.</li>
+                            <li>Implemented QR scanning and text-to-speech.</li>
+                            <li>Built solutions impacting 50K+ users.</li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section class="section dark-section" id="projects">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+                <p>04 — PROJECTS</p>
+                <h2>Things I've <span>built.</span></h2>
+            </div>
+
+
+            <div class="projects-grid">
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        01
+                    </div>
+
+                    <h3>Wayo Mobility Platform</h3>
+
+                    <p>
+                        Customer and driver Android applications supporting
+                        mobility workflows, real-time location tracking and
+                        backend-driven interfaces.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Kotlin</span>
+                        <span>Jetpack</span>
+                        <span>Retrofit</span>
+                        <span>RoomDB</span>
+                        <span>Google Maps</span>
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        02
+                    </div>
+
+                    <h3>BluSmart Rider & Driver Apps</h3>
+
+                    <p>
+                        Large-scale mobility applications with real-time
+                        tracking, optimized background services and scalable
+                        multi-module architecture.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Kotlin</span>
+                        <span>Coroutines</span>
+                        <span>MVVM</span>
+                        <span>RoomDB</span>
+                        <span>Maps SDK</span>
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        03
+                    </div>
+
+                    <h3>Digital Kisan</h3>
+
+                    <p>
+                        A digital platform designed for farmers with
+                        multilingual support and integrated payment
+                        functionality.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Android</span>
+                        <span>Java</span>
+                        <span>Razorpay</span>
+                        <span>Multilingual</span>
+                    </div>
+
+                </article>
+
+
+                <article class="project-card">
+
+                    <div class="project-number">
+                        04
+                    </div>
+
+                    <h3>Prefect Academy</h3>
+
+                    <p>
+                        Education-focused Android application where the
+                        architecture evolved from MVP towards MVVM.
+                    </p>
+
+                    <div class="project-tags">
+                        <span>Android</span>
+                        <span>MVVM</span>
+                        <span>QR Scanner</span>
+                        <span>TTS</span>
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- IMPACT -->
+    <section class="impact-section">
+
+        <div class="section-container">
+
+            <div class="impact-grid">
+
+                <div>
+                    <strong>80K+</strong>
+                    <span>Monthly Active Users</span>
+                </div>
+
+                <div>
+                    <strong>1M+</strong>
+                    <span>App Downloads</span>
+                </div>
+
+                <div>
+                    <strong>50K+</strong>
+                    <span>Users Impacted</span>
+                </div>
+
+                <div>
+                    <strong>4.5+</strong>
+                    <span>Play Store Rating</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+                <p>05 — EDUCATION</p>
+                <h2>Academic <span>background.</span></h2>
+            </div>
+
+            <div class="education-card">
+
+                <div class="education-icon">
+                    🎓
+                </div>
+
+                <div>
+                    <h3>Visvesvaraya Technological University</h3>
+                    <p>Engineering / Higher Education</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="section dark-section contact-section" id="contact">
+
+       <section class="section dark-section contact-section" id="contact">
+
+    <div class="section-container">
+
+        <div class="contact-content">
+
+            <p class="contact-label">
+                LET'S CONNECT
+            </p>
+
+            <h2>
+                Let's build something
+                <span>great.</span>
+            </h2>
+
+            <p>
+                Interested in Android engineering, mobile products,
+                architecture or technology? Let's connect.
+            </p>
+
+            <div class="contact-buttons">
+
+                <!-- LinkedIn -->
+                <a
+                    href="https://www.linkedin.com/in/chand-mohd-592b60141/"
+                    target="_blank"
+                    class="btn primary-btn"
+                >
+                    LinkedIn ↗
+                </a>
+
+                <!-- GitHub -->
+                <a
+                    href="https://github.com/chandmohd/"
+                    target="_blank"
+                    class="btn secondary-btn"
+                >
+                    GitHub ↗
+                </a>
+
+                <!-- Instagram -->
+                <a
+                    href="https://www.instagram.com/chandmohd00/"
+                    target="_blank"
+                    class="btn secondary-btn"
+                >
+                    Instagram ↗
+                </a>
+
+          
+        </div>
+
+    </div>
+
+</section>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-container">
+
+            <div>
+                <strong>Chand Mohd</strong>
+                <p>Lead Android Engineer</p>
+            </div>
+
+            <p>
+                © <span id="year"></span> Chand Mohd. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
