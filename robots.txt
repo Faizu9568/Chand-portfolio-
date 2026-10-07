@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chand-portfolio-azure.vercel.app/sitemap.xml
