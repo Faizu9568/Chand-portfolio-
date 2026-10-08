@@ -2567,3 +2567,349 @@ footer {
         left: -8px !important;
     }
 }
+/* =========================================================
+   CHAND MOHD PORTFOLIO
+   FINAL MOBILE OVERRIDE
+   THIS MUST BE THE LAST CSS IN THE FILE
+========================================================= */
+
+@media only screen and (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    /* HERO */
+    .hero {
+        display: block !important;
+        width: 100% !important;
+        min-height: auto !important;
+        height: auto !important;
+        padding: 105px 18px 60px !important;
+        overflow: hidden !important;
+    }
+
+    /* MAIN HERO CONTAINER */
+    .hero-container {
+        width: 100% !important;
+        max-width: 100% !important;
+
+        margin: 0 auto !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: flex-start !important;
+
+        gap: 0 !important;
+
+        text-align: center !important;
+
+        position: relative !important;
+    }
+
+    /* =====================================================
+       TEXT AREA
+    ===================================================== */
+
+    .hero-content {
+        width: 100% !important;
+        max-width: 600px !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+
+        position: relative !important;
+        z-index: 2 !important;
+
+        text-align: center !important;
+    }
+
+    .hero-small {
+        display: block !important;
+
+        margin: 0 0 18px !important;
+
+        font-size: 12px !important;
+        letter-spacing: 4px !important;
+    }
+
+    .hero h1,
+    .hero-content h1 {
+        width: 100% !important;
+
+        margin: 0 0 25px !important;
+
+        font-size: 58px !important;
+        line-height: 0.95 !important;
+
+        letter-spacing: -3px !important;
+
+        text-align: center !important;
+    }
+
+    .hero h1 span,
+    .hero-content h1 span {
+        display: block !important;
+    }
+
+    .hero h2,
+    .hero-content h2 {
+        width: 100% !important;
+
+        margin: 0 0 25px !important;
+
+        font-size: 25px !important;
+        line-height: 1.2 !important;
+
+        letter-spacing: -0.5px !important;
+
+        text-align: center !important;
+    }
+
+    .hero-description,
+    .hero-content p.hero-description {
+        width: 100% !important;
+        max-width: 500px !important;
+
+        margin: 0 auto 30px !important;
+
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+
+        text-align: center !important;
+    }
+
+    /* =====================================================
+       BUTTONS
+    ===================================================== */
+
+    .hero-buttons {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        gap: 14px !important;
+
+        margin: 0 !important;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 340px !important;
+
+        min-height: 54px !important;
+    }
+
+    /* =====================================================
+       LOCATION
+    ===================================================== */
+
+    .hero-location {
+        width: 100% !important;
+
+        display: flex !important;
+
+        align-items: center !important;
+        justify-content: center !important;
+
+        margin: 28px 0 45px !important;
+
+        text-align: center !important;
+
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    /* =====================================================
+       IMAGE
+       IMPORTANT: IMAGE IS NOW BELOW ALL TEXT
+    ===================================================== */
+
+    .hero-image-container {
+        position: relative !important;
+
+        width: 300px !important;
+        height: 330px !important;
+
+        max-width: 300px !important;
+
+        margin: 0 auto !important;
+
+        display: block !important;
+
+        flex: none !important;
+
+        order: initial !important;
+
+        transform: none !important;
+
+        z-index: 1 !important;
+
+        align-self: center !important;
+
+        justify-self: center !important;
+    }
+
+    /* =====================================================
+       RING
+    ===================================================== */
+
+    .hero-image-container .image-ring {
+        position: absolute !important;
+
+        width: 285px !important;
+        height: 285px !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 1 !important;
+    }
+
+    /* =====================================================
+       PHOTO
+    ===================================================== */
+
+    .hero-image-container .profile-card {
+        position: absolute !important;
+
+        width: 250px !important;
+        height: 250px !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 3 !important;
+
+        overflow: hidden !important;
+    }
+
+    .hero-image-container .profile-card img {
+        width: 100% !important;
+        height: 100% !important;
+
+        object-fit: cover !important;
+
+        display: block !important;
+    }
+
+    /* =====================================================
+       8+ YEARS CARD
+    ===================================================== */
+
+    .hero-image-container .floating-card.card-top {
+        position: absolute !important;
+
+        top: 0 !important;
+        right: -2px !important;
+
+        left: auto !important;
+        bottom: auto !important;
+
+        min-width: 105px !important;
+
+        padding: 12px 14px !important;
+
+        z-index: 20 !important;
+
+        transform: none !important;
+    }
+
+    /* =====================================================
+       KOTLIN CARD
+    ===================================================== */
+
+    .hero-image-container .floating-card.card-bottom {
+        position: absolute !important;
+
+        bottom: 0 !important;
+        left: -2px !important;
+
+        right: auto !important;
+        top: auto !important;
+
+        min-width: 120px !important;
+
+        padding: 12px 14px !important;
+
+        z-index: 20 !important;
+
+        transform: none !important;
+    }
+
+    .hero-image-container .floating-card strong {
+        font-size: 21px !important;
+    }
+
+    .hero-image-container .floating-card span {
+        font-size: 10px !important;
+    }
+
+    .scroll-indicator {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media only screen and (max-width: 400px) {
+
+    .hero {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .hero h1,
+    .hero-content h1 {
+        font-size: 52px !important;
+    }
+
+    .hero h2,
+    .hero-content h2 {
+        font-size: 22px !important;
+    }
+
+    .hero-description {
+        font-size: 14px !important;
+    }
+
+    .hero-image-container {
+        width: 275px !important;
+        height: 305px !important;
+    }
+
+    .hero-image-container .image-ring {
+        width: 260px !important;
+        height: 260px !important;
+    }
+
+    .hero-image-container .profile-card {
+        width: 225px !important;
+        height: 225px !important;
+    }
+
+    .hero-image-container .floating-card.card-top {
+        right: -5px !important;
+    }
+
+    .hero-image-container .floating-card.card-bottom {
+        left: -5px !important;
+    }
+}
