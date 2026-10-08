@@ -2301,3 +2301,269 @@ footer {
         padding: 10px 11px !important;
     }
 }
+/* =========================================================
+   FINAL MOBILE HERO - DO NOT OVERLAP
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+    .hero {
+        min-height: auto !important;
+        height: auto !important;
+        padding: 105px 16px 70px !important;
+        overflow: hidden !important;
+    }
+
+    /* FORCE HERO INTO VERTICAL ROWS */
+    .hero-container {
+        width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto auto auto !important;
+        gap: 0 !important;
+        align-items: start !important;
+        justify-items: center !important;
+    }
+
+    /* =========================
+       TEXT
+    ========================= */
+
+    .hero-content {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+
+        width: 100% !important;
+        max-width: 600px !important;
+
+        text-align: center !important;
+
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+    .hero-small {
+        margin-bottom: 18px !important;
+    }
+
+    .hero-content h1 {
+        font-size: 58px !important;
+        line-height: 0.95 !important;
+        letter-spacing: -3px !important;
+        margin: 0 0 25px !important;
+    }
+
+    .hero-content h1 span {
+        display: block !important;
+    }
+
+    .hero-content h2 {
+        font-size: 25px !important;
+        line-height: 1.2 !important;
+        margin: 0 0 25px !important;
+    }
+
+    .hero-description {
+        width: 100% !important;
+        max-width: 500px !important;
+
+        margin: 0 auto 28px !important;
+
+        font-size: 15px !important;
+        line-height: 1.7 !important;
+    }
+
+    /* BUTTONS */
+    .hero-buttons {
+        width: 100% !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        align-items: center !important;
+
+        gap: 14px !important;
+
+        margin-top: 25px !important;
+    }
+
+    .hero-buttons .btn {
+        width: 100% !important;
+        max-width: 340px !important;
+    }
+
+
+    /* =========================
+       LOCATION
+    ========================= */
+
+    .hero-location {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+
+        width: 100% !important;
+
+        justify-content: center !important;
+        text-align: center !important;
+
+        margin: 25px 0 35px !important;
+
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+
+    /* =========================
+       IMAGE
+    ========================= */
+
+    .hero-image-container {
+        grid-column: 1 !important;
+        grid-row: 3 !important;
+
+        position: relative !important;
+
+        width: 300px !important;
+        height: 330px !important;
+
+        margin: 0 auto !important;
+
+        display: block !important;
+
+        transform: none !important;
+
+        z-index: 1 !important;
+
+        justify-self: center !important;
+        align-self: start !important;
+    }
+
+
+    /* RING */
+
+    .hero-image-container .image-ring {
+        position: absolute !important;
+
+        width: 285px !important;
+        height: 285px !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+    }
+
+
+    /* PHOTO */
+
+    .hero-image-container .profile-card {
+        position: absolute !important;
+
+        width: 250px !important;
+        height: 250px !important;
+
+        left: 50% !important;
+        top: 50% !important;
+
+        transform: translate(-50%, -50%) !important;
+
+        z-index: 3 !important;
+    }
+
+
+    /* EXPERIENCE CARD */
+
+    .hero-image-container .card-top {
+        position: absolute !important;
+
+        top: 0 !important;
+        right: -5px !important;
+
+        left: auto !important;
+        bottom: auto !important;
+
+        min-width: 105px !important;
+
+        padding: 12px 14px !important;
+
+        z-index: 10 !important;
+
+        transform: none !important;
+    }
+
+
+    /* KOTLIN CARD */
+
+    .hero-image-container .card-bottom {
+        position: absolute !important;
+
+        bottom: 0 !important;
+        left: -5px !important;
+
+        right: auto !important;
+        top: auto !important;
+
+        min-width: 120px !important;
+
+        padding: 12px 14px !important;
+
+        z-index: 10 !important;
+
+        transform: none !important;
+    }
+
+    .floating-card strong {
+        font-size: 21px !important;
+    }
+
+    .floating-card span {
+        font-size: 10px !important;
+    }
+
+    .scroll-indicator {
+        display: none !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+========================================================= */
+
+@media screen and (max-width: 400px) {
+
+    .hero-content h1 {
+        font-size: 52px !important;
+    }
+
+    .hero-content h2 {
+        font-size: 22px !important;
+    }
+
+    .hero-description {
+        font-size: 14px !important;
+    }
+
+    .hero-image-container {
+        width: 275px !important;
+        height: 305px !important;
+    }
+
+    .hero-image-container .image-ring {
+        width: 260px !important;
+        height: 260px !important;
+    }
+
+    .hero-image-container .profile-card {
+        width: 225px !important;
+        height: 225px !important;
+    }
+
+    .hero-image-container .card-top {
+        right: -8px !important;
+    }
+
+    .hero-image-container .card-bottom {
+        left: -8px !important;
+    }
+}
