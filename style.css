@@ -1870,3 +1870,226 @@ footer {
         min-width: 130px;
     }
 }
+/* =========================================================
+   FINAL MOBILE HERO FIX
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        min-height: auto;
+        padding: 105px 18px 70px;
+        overflow: hidden;
+    }
+
+    .hero-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    /* TEXT */
+    .hero-content {
+        width: 100%;
+        text-align: center;
+        order: 1;
+    }
+
+    .hero-small {
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        font-size: clamp(55px, 17vw, 75px);
+        line-height: 0.95;
+        letter-spacing: -3px;
+    }
+
+    .hero h1 span {
+        display: block;
+    }
+
+    .hero h2 {
+        font-size: 27px;
+        line-height: 1.2;
+        margin-top: 25px;
+    }
+
+    .hero-description {
+        max-width: 500px;
+        margin: 22px auto 0;
+        font-size: 16px;
+        line-height: 1.7;
+    }
+
+    /* BUTTONS */
+    .hero-buttons {
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .hero-buttons .btn {
+        max-width: 330px;
+    }
+
+    /* LOCATION */
+    .hero-location {
+        justify-content: center;
+        text-align: center;
+    }
+
+    /* IMAGE AREA */
+    .hero-image-container {
+        order: 2;
+
+        width: 100%;
+        max-width: 340px;
+        height: 370px;
+
+        margin: 0 auto;
+
+        position: relative;
+
+        display: block;
+
+        transform: none;
+    }
+
+    /* RING */
+    .image-ring {
+        width: 310px;
+        height: 310px;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+    }
+
+    /* PHOTO */
+    .profile-card {
+        width: 270px;
+        height: 270px;
+
+        left: 50%;
+        top: 50%;
+
+        transform: translate(-50%, -50%);
+
+        border-radius: 24px;
+
+        overflow: hidden;
+    }
+
+    .profile-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* EXPERIENCE CARD */
+    .hero-image-container .card-top {
+        top: 5px;
+        right: -2px;
+
+        min-width: 120px;
+        padding: 14px 16px;
+
+        z-index: 20;
+    }
+
+    /* KOTLIN CARD */
+    .hero-image-container .card-bottom {
+        bottom: 5px;
+        left: -2px;
+
+        min-width: 135px;
+        padding: 14px 16px;
+
+        z-index: 20;
+    }
+
+    .floating-card strong {
+        font-size: 23px;
+    }
+
+    .floating-card span {
+        font-size: 11px;
+    }
+
+    /* HIDE SCROLL TEXT ON SMALL SCREENS */
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .hero {
+        padding: 95px 15px 60px;
+    }
+
+    .hero-container {
+        gap: 30px;
+    }
+
+    .hero h1 {
+        font-size: 58px;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .hero-image-container {
+        max-width: 310px;
+        height: 345px;
+    }
+
+    .image-ring {
+        width: 285px;
+        height: 285px;
+    }
+
+    .profile-card {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-image-container .card-top {
+        top: 2px;
+        right: -3px;
+
+        min-width: 108px;
+        padding: 12px 14px;
+    }
+
+    .hero-image-container .card-bottom {
+        bottom: 2px;
+        left: -3px;
+
+        min-width: 125px;
+        padding: 12px 14px;
+    }
+
+    .floating-card strong {
+        font-size: 21px;
+    }
+
+    .floating-card span {
+        font-size: 10px;
+    }
+}
